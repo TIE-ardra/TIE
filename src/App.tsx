@@ -1268,7 +1268,6 @@ function Footer() {
             <div className="mt-4 text-xs leading-6 text-white/50">
               <p>Phone: +91 89212 33005</p>
               <p>Email: hello@thinkinenglish.in</p>
-              <p>Address: Online Coaching Services, Kochi, Kerala, India - 682020</p>
             </div>
           </div>
           <div className="flex justify-start md:justify-end gap-3">
