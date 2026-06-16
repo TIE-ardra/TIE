@@ -1,0 +1,26 @@
+# Think in English
+
+> Premium online coaching for IELTS, PTE, CELPIP, Duolingo, LanguageCert, and career English fluency.
+
+Think in English specializes in personalized, one-on-one, and small-group training. It focuses on breaking the habit of translating from a native language to build authentic confidence, rather than using rigid templates or robotic scripts.
+
+## Navigation & Sections
+
+- [Homepage](https://think-in-english-lilac.vercel.app/): Main landing page containing overview, courses, and booking options.
+- [Contact/Booking](https://think-in-english-lilac.vercel.app/#contact): Inquiry form for booking a demo or submitting details.
+
+## Courses Offered
+
+- **IELTS Prep** (4-8 weeks): Focuses on speaking blocks and writing feedback.
+- **PTE Training** (3-6 weeks): Score-driven preparation to master the PTE computer grading algorithm.
+- **CELPIP** (4-6 weeks): Canada immigration-focused exam preparation.
+- **Duolingo** (2-4 weeks): Fast-track practice for university admissions.
+- **LanguageCert** (3-5 weeks): Targeted speaking drills to avoid freezing under pressure.
+- **Real Fluency** (Flexible): General career/workplace English confidence and pronunciation correction.
+- **Crash Lessons** (Fast fixes): Targeted 2-5 hour short sessions.
+
+## Contact & Inquiries
+
+- **WhatsApp & Call**: [+91 89212 33005](https://wa.me/918921233005)
+- **Email**: [hello@thinkinenglish.in](mailto:hello@thinkinenglish.in)
+- **API Endpoint**: `/api/inquiry` - Accepts `POST` requests containing `user_name`, `user_phone`, `user_email`, `message`, and `exam_date` to submit direct inquiries.

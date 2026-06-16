@@ -474,7 +474,7 @@ function Hero() {
             </motion.a>
             <motion.a
 
-              href="https://wa.me/919999999999"
+              href="https://wa.me/918921233005"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-full border border-white/20 bg-white/5 px-8 py-4 text-sm font-bold text-white backdrop-blur-md transition hover:bg-white/10 sm:min-h-0 sm:w-auto"
@@ -1079,32 +1079,45 @@ function ContactSection() {
 
     setLoading(true);
 
-    import("@emailjs/browser")
-      .then(({ default: emailjs }) =>
-        emailjs.sendForm(
-          "service_2gsw3vb",
-          "template_ejyivw7",
-          currentForm,
-          "UuNmf3kVCj3UHqC28"
-        )
-      )
-      .then(
-        () => {
-          setLoading(false);
-          setSubmitted(true);
-          currentForm.reset();
-          globalThis.setTimeout(() => setSubmitted(false), 3000);
-        },
-        (error: { text: string; message: string }) => {
-          setLoading(false);
-          console.log("FAILED...", error.text);
-          alert(`Failed to send message. Error: ${error.text || error.message || JSON.stringify(error)}`);
+    const formData = new FormData(currentForm);
+    const data = {
+      user_name: formData.get('user_name'),
+      user_phone: formData.get('user_phone'),
+      user_email: formData.get('user_email'),
+      message: formData.get('message'),
+      exam_date: formData.get('exam_date'),
+    };
+
+    fetch('/api/inquiry', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    })
+      .then((res) => {
+        if (!res.ok) {
+          return res.json().then((err) => {
+            throw new Error(err.error || 'Server error');
+          });
         }
-      );
+        return res.json();
+      })
+      .then(() => {
+        setLoading(false);
+        setSubmitted(true);
+        currentForm.reset();
+        globalThis.setTimeout(() => setSubmitted(false), 3000);
+      })
+      .catch((error) => {
+        setLoading(false);
+        console.error("FAILED...", error);
+        alert(`Failed to send message: ${error.message}`);
+      });
   };
 
   const contactChips = [
-    ["WhatsApp & Call", "+91 99999 99999", "https://wa.me/919999999999", "chat"],
+    ["WhatsApp & Call", "+91 89212 33005", "https://wa.me/918921233005", "chat"],
     ["Email", "hello@thinkinenglish.in", "mailto:hello@thinkinenglish.in", "mail"]
   ] as const;
 
@@ -1138,7 +1151,7 @@ function ContactSection() {
                     return (
                       <div key={label} className="flex w-full flex-col gap-3 sm:w-auto sm:flex-row">
                         <motion.a
-                          href="https://wa.me/919999999999"
+                          href="https://wa.me/918921233005"
                           target="_blank"
                           rel="noopener noreferrer"
                           className="inline-flex min-h-12 w-full items-center gap-3 rounded-full border border-border/30 bg-white/10 px-6 py-4 text-sm font-semibold text-white sm:w-auto"
@@ -1149,7 +1162,7 @@ function ContactSection() {
                           <span>WhatsApp: {value}</span>
                         </motion.a>
                         <motion.a
-                          href="tel:+919999999999"
+                          href="tel:+918921233005"
                           className="inline-flex min-h-12 w-full items-center gap-3 rounded-full border border-border/30 bg-white/10 px-6 py-4 text-sm font-semibold text-white sm:w-auto"
                         >
                           <span className="rounded-full bg-white/12 p-2">
@@ -1266,7 +1279,8 @@ function Footer() {
   const socialIcons = [
     ["Instagram", "https://www.instagram.com/thinknspeak_in_english", "M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm10 2a3 3 0 110 6 3 3 0 010-6zm4.5-.9a1.1 1.1 0 110 2.2 1.1 1.1 0 010-2.2zM12 7a5 5 0 100 10 5 5 0 000-10z"],
     ["YouTube", "https://www.youtube.com/@thinkinenglish1111", "M22 12s0-3.4-.4-5c-.2-1.1-1.1-2-2.2-2.2C17.8 4.4 12 4.4 12 4.4s-5.8 0-7.4.4c-1.1.2-2 1.1-2.2 2.2C2 8.6 2 12 2 12s0 3.4.4 5c.2 1.1 1.1 2 2.2 2.2 1.6.4 7.4.4 7.4.4s5.8 0 7.4-.4c1.1-.2 2-1.1 2.2-2.2.4-1.6.4-5 .4-5zM10 15.5v-7l6 3.5-6 3.5z"],
-    ["Facebook", "https://www.facebook.com/thinkinenglish", "M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"]
+    ["Facebook", "https://www.facebook.com/thinkinenglish", "M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"],
+    ["LinkedIn", "https://linkedin.com/company/think-in-english", "M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"]
   ] as const;
 
   return (
@@ -1278,6 +1292,11 @@ function Footer() {
               <span className="text-gold">Think</span> in English
             </button>
             <p className="mt-2 text-sm text-white/70">Unravel your journey of English</p>
+            <div className="mt-4 text-xs leading-6 text-white/50">
+              <p>Phone: +91 89212 33005</p>
+              <p>Email: hello@thinkinenglish.in</p>
+              <p>Address: Online Coaching Services, Kochi, Kerala, India - 682020</p>
+            </div>
           </div>
           <div className="flex justify-start md:justify-end gap-3">
             {socialIcons.map(([label, href, path]) => (
@@ -1306,7 +1325,7 @@ function FloatingWhatsApp() {
   return (
     <>
       <motion.a
-        href="https://wa.me/919999999999"
+        href="https://wa.me/918921233005"
         target="_blank"
         rel="noopener noreferrer"
 
@@ -1322,7 +1341,7 @@ function FloatingWhatsApp() {
             Book Demo
           </a>
           <a
-            href="https://wa.me/919999999999"
+            href="https://wa.me/918921233005"
             target="_blank"
             rel="noopener noreferrer"
             className="flex-1 rounded-full border border-white/20 bg-white/5 px-4 py-3 text-center text-base font-extrabold uppercase tracking-[0.08em] text-white"
