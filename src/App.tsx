@@ -555,7 +555,7 @@ function TrustStrip() {
 function AboutSection() {
   return (
     <section id="about" className={`section-shell ${sectionSpacing}`}>
-      <div className={`relative ${pageContainer} grid gap-14 lg:grid-cols-[1.25fr_0.75fr] items-center`}>
+      <div className={`relative ${pageContainer} grid gap-14 lg:grid-cols-[1.25fr_0.75fr] items-start`}>
         <div className="relative z-10 lg:-mr-12">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
