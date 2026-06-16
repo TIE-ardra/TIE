@@ -363,7 +363,7 @@ function NavBar() {
           ].join(" ")}
         >
           <button onClick={() => window.scrollTo(0, 0)} className="flex items-center gap-3 font-serif text-2xl tracking-[0.01em] transition-colors text-white hover:opacity-80" aria-label="Think in English - Home">
-            <img src="/logo.png" alt="Think in English Logo" className="h-10 w-auto object-contain rounded-md" />
+            <img src="/logo.png" alt="Think in English Logo" className="h-14 w-auto object-contain rounded-md" />
             <span><span className="text-gold">Think</span> in English</span>
           </button>
           <nav className="hidden items-center gap-8 md:flex">
@@ -430,7 +430,7 @@ function Hero() {
             <span className="block mt-1 text-gold">clarity and confidence.</span>
           </motion.h1>
 
-          <motion.p variants={fadeUp} className="mt-4 max-w-2xl text-base leading-7 text-white/70 md:text-[1.05rem]">
+          <motion.p variants={fadeUp} className="mt-4 max-w-2xl text-base leading-7 text-white md:text-[1.05rem]">
             You don't need a generic institute. You just need someone to hear where you stumble and fix it live. We offer highly personalized online coaching for IELTS, PTE, CELPIP, Duolingo, LanguageCert, and career English, focused entirely on removing your specific hesitation blocks.
           </motion.p>
 
@@ -572,7 +572,7 @@ function AboutSection() {
               <p className="text-xl font-medium text-white md:text-[1.35rem]">
                 You can't lecture someone into fluency.
               </p>
-              <p className="mt-5 max-w-xl text-[1.05rem] leading-[1.8] text-white/70 text-justify">
+              <p className="mt-5 max-w-xl text-[1.05rem] leading-[1.8] text-white text-justify">
                 Fluency isn’t about memorizing rules—it’s about moving past hesitation and nerves to express ideas clearly. Instead of traditional lectures, this coaching focuses on real-time practice and instant feedback tailored to your goals, whether you are preparing for IELTS, an interview, or workplace communication. By identifying your specific speech patterns and correcting them on the spot, the program builds the genuine confidence needed to handle real-world pressure.
               </p>
             </div>
@@ -588,7 +588,7 @@ function AboutSection() {
             {aboutStats.map((item) => (
               <motion.article key={item.value} variants={fadeUp} className="rounded-none border-t border-white/10 pt-6 pb-4">
                 <p className="font-serif text-[1.35rem] leading-tight text-white">{item.value}</p>
-                <p className="mt-3 text-sm leading-7 text-white/70">{item.note}</p>
+                <p className="mt-3 text-sm leading-7 text-white">{item.note}</p>
               </motion.article>
             ))}
           </motion.div>
@@ -671,7 +671,7 @@ function WhySection() {
           copy="I don't believe in running a factory. The coaching is designed to feel dependable and distinctly human. That means honest feedback and a clear sense of progress. Every session is led directly by the founder, ensuring consistent quality and personalized attention. We focus on practical communication skills that transfer directly to real-world situations, whether you're preparing for international exams or professional presentations."
           titleClass="text-white"
           eyebrowClass="text-white/50"
-          copyClass="text-white/70"
+          copyClass="text-white"
         />
 
         <div className="mt-14 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
@@ -699,7 +699,7 @@ function WhySection() {
                   <h3 className="text-2xl font-serif leading-tight text-white lg:text-[1.8rem]">{item.title}</h3>
                 </div>
                 <div className={isWide ? "lg:max-w-md" : ""}>
-                  <p className="text-sm leading-8 text-white/70 md:text-base">{item.copy}</p>
+                  <p className="text-sm leading-8 text-white md:text-base">{item.copy}</p>
                   <div className="mt-6 flex items-center gap-3 text-xs font-bold uppercase tracking-[0.15em] text-white/50">
                     <span className="h-px w-10 bg-gold/50" />
 
@@ -806,7 +806,7 @@ function CourseCard({ course }: Readonly<{ course: Course }>) {
       </div>
 
       <h3 className="mt-10 font-serif text-[2rem] leading-tight text-white relative z-10">{course.name}</h3>
-      <p className="mt-5 max-w-md text-sm leading-8 text-white/70 md:text-[0.95rem] relative z-10">{course.outcome}</p>
+      <p className="mt-5 max-w-md text-sm leading-8 text-white md:text-[0.95rem] relative z-10">{course.outcome}</p>
 
       <div className="mt-auto relative z-10">
         <p className="mt-10 text-[10px] font-extrabold uppercase tracking-[0.2em] text-white/40">Directed correction</p>
@@ -837,7 +837,7 @@ function CoursesSection() {
           copy="Standardized tests shouldn't feel like a casino. We focus relentlessly on the exact rubrics so you don't just 'try' the exam - you control it."
           titleClass="text-white"
           eyebrowClass="text-white/50"
-          copyClass="text-white/70"
+          copyClass="text-white"
         />
 
         <motion.div
@@ -863,7 +863,7 @@ function CoursesSection() {
           <h3 className="font-serif text-[1.75rem] md:text-[2.2rem] leading-tight text-white max-w-2xl">
             No long-term commitment. Just results.
           </h3>
-          <p className="mt-3 text-lg text-white/70">
+          <p className="mt-3 text-lg text-white">
             Pay per session. Learn what you need.
           </p>
           <p className="mt-4 max-w-2xl text-sm leading-7 text-white/62 md:text-base">
@@ -941,7 +941,7 @@ function FormatSection() {
                   </div>
                   <div>
                     <p className="text-lg font-semibold text-white">{title}</p>
-                    <p className="mt-1 text-sm leading-7 text-white/70">{copy}</p>
+                    <p className="mt-1 text-sm leading-7 text-white">{copy}</p>
                   </div>
                 </div>
               ))}
@@ -968,7 +968,7 @@ function TestimonialSection() {
             narrow
             titleClass="text-white"
             eyebrowClass="text-white/50"
-            copyClass="text-white/70"
+            copyClass="text-white"
           />
           <Suspense fallback={<div>Loading testimonials...</div>}>
             <Testimonials />
@@ -992,7 +992,7 @@ function FAQSection() {
           align="center"
           titleClass="text-white"
           eyebrowClass="text-white/50"
-          copyClass="text-white/70"
+          copyClass="text-white"
         />
 
         <div className="mt-12 space-y-4">
@@ -1026,7 +1026,7 @@ function FAQSection() {
                       exit={{ height: 0, opacity: 0 }}
                       transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
                     >
-                      <div className="px-6 pb-7 text-sm leading-8 text-white/70 md:px-7 md:text-base">{answer}</div>
+                      <div className="px-6 pb-7 text-sm leading-8 text-white md:px-7 md:text-base">{answer}</div>
                     </motion.div>
                   ) : null}
                 </AnimatePresence>
@@ -1146,7 +1146,7 @@ function ContactSection() {
                 <p className="mt-4 text-3xl font-serif leading-tight text-white md:text-4xl">
                   Stop scrolling. Let's look at your current level and build a roadmap.
                 </p>
-                <p className="mt-5 text-base leading-8 text-white/70">
+                <p className="mt-5 text-base leading-8 text-white">
                   No sales teams, no pressure. You'll speak directly with me. We'll identify what's blocking your fluency or score, and decide if I'm the right mentor for you.
                 </p>
 
@@ -1234,10 +1234,10 @@ function Footer() {
         <div className="grid gap-8 md:grid-cols-2 items-center">
           <div>
             <button onClick={() => window.scrollTo(0, 0)} className="flex items-center gap-3 font-serif text-2xl text-white hover:opacity-80" aria-label="Think in English - Home">
-              <img src="/logo.png" alt="Think in English Logo" className="h-10 w-auto object-contain rounded-md" />
+              <img src="/logo.png" alt="Think in English Logo" className="h-14 w-auto object-contain rounded-md" />
               <span><span className="text-gold">Think</span> in English</span>
             </button>
-            <p className="mt-2 text-sm text-white/70">Unravel your journey of English</p>
+            <p className="mt-2 text-sm text-white">Unravel your journey of English</p>
             <div className="mt-4 text-xs leading-6 text-white/50">
               <p>Phone: +91 89212 33005</p>
               <p>Email: hello@thinkinenglish.in</p>
