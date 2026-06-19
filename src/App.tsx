@@ -439,7 +439,7 @@ function NavBar() {
         <div className="flex items-center justify-between">
           <button onClick={() => window.scrollTo(0, 0)} className="flex items-center gap-3.5 sm:gap-4.5 font-serif text-3xl sm:text-[32px] md:text-[40px] font-semibold md:font-bold tracking-[0.01em] transition-colors text-white hover:opacity-80" aria-label="Think in English - Home">
             <img src="/logo_transparent.png" alt="Think in English Logo" className="h-[72px] w-[72px] sm:h-[80px] sm:w-[80px] md:h-[96px] md:w-[96px] object-contain rounded-md flex-shrink-0" />
-            <span><span className="text-gold">Think</span><span className="hidden min-[400px]:inline"> in English</span></span>
+            <span className="hidden sm:inline"><span className="text-gold">Think</span> in English</span>
           </button>
           <div className="flex items-center gap-4 sm:gap-6">
             <nav className="hidden items-center gap-8 md:flex">
@@ -468,9 +468,9 @@ function NavBar() {
             <motion.a
               whileTap={{ scale: 0.96 }}
               href="#contact"
-              className="inline-flex h-9 sm:h-10 items-center justify-center rounded-full bg-gold px-3.5 sm:px-5 text-xs sm:text-sm font-bold text-white shadow-sm transition-all hover:bg-gold/90 hover:shadow-[0_4px_12px_rgba(182,144,99,0.25)]"
+              className="hidden sm:inline-flex h-10 items-center justify-center rounded-full bg-gold px-5 text-sm font-bold text-white shadow-sm transition-all hover:bg-gold/90 hover:shadow-[0_4px_12px_rgba(182,144,99,0.25)]"
             >
-              Book Demo
+              Start Here
             </motion.a>
           </div>
         </div>
@@ -521,20 +521,28 @@ function Hero() {
             <span className="block mt-1 text-gold">clarity and confidence.</span>
           </motion.h1>
 
-          <motion.p variants={fadeUp} className="mt-4 max-w-2xl text-base leading-7 text-white md:text-[1.05rem]">
-            You don't need a generic institute. You just need someone to hear where you stumble and fix it live. We offer highly personalized online coaching for IELTS, PTE, CELPIP, Duolingo, LanguageCert, and career English, focused entirely on removing your specific hesitation blocks.
+          <motion.p variants={fadeUp} className="mt-5 max-w-2xl text-base leading-relaxed text-white md:text-lg">
+            You don't need a generic institute. You need personalized coaching to fix where you stumble live.
           </motion.p>
 
-          <motion.div variants={fadeUp} className="mt-3 flex flex-wrap items-center gap-3 text-sm font-semibold text-white/80">
-            {["Live Classes", "Flexible Timings", "Personal Guidance"].map((item, index) => (
-              <span key={item} className="flex items-center gap-3">
-                {item}
-                {index < 2 ? <span className="text-gold">/</span> : null}
-              </span>
+          <motion.ul variants={fadeUp} className="mt-6 space-y-3">
+            {[
+              "Live One-on-One Classes & Group Drills",
+              "Flexible Timings tailored to your schedule",
+              "Personalized Guidance directly from the founder"
+            ].map((item) => (
+              <li key={item} className="flex items-center gap-3 text-base font-medium text-white/90">
+                <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-gold/20 text-gold">
+                  <svg viewBox="0 0 24 24" className="h-3 w-3 fill-none stroke-current" strokeWidth="3" xmlns="http://www.w3.org/2000/svg">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                </span>
+                <span>{item}</span>
+              </li>
             ))}
-          </motion.div>
+          </motion.ul>
 
-          <motion.div variants={fadeUp} className="mt-4 flex flex-col gap-4 sm:flex-row sm:flex-wrap">
+          <motion.div variants={fadeUp} className="mt-8 flex flex-col gap-4 sm:flex-row sm:flex-wrap">
             <motion.a
               whileTap={{ scale: 0.99 }}
               href="#contact"
@@ -543,6 +551,27 @@ function Hero() {
               Get Your Roadmap
               <Icon path={icons.arrow} className="h-4 w-4" />
             </motion.a>
+            <motion.a
+              whileTap={{ scale: 0.99 }}
+              href="https://wa.me/918921233005?text=Hi!%20I%20would%20like%20to%20start%20with%20a%20demo%20class"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-full border border-gold bg-white/5 px-8 py-4 text-sm font-bold text-white backdrop-blur-md shadow-sm transition hover:bg-white/10 sm:min-h-0 sm:w-auto"
+            >
+              Message me on WhatsApp
+              <svg viewBox="0 0 24 24" className="h-[18px] w-[18px] fill-current text-gold" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12.004 2c-5.51 0-9.993 4.483-9.993 9.993 0 1.763.457 3.49 1.332 5.016L2 22l5.127-1.346c1.472.802 3.123 1.226 4.877 1.226 5.511 0 9.994-4.483 9.994-9.993C21.998 6.483 17.514 2 12.004 2zm5.244 13.021c-.287.41-.836.758-1.36.953-.41.154-.923.277-2.605-.42-2.144-.892-3.477-3.067-3.58-3.21-.1-.133-.825-1.097-.825-2.092 0-.995.523-1.482.708-1.677.185-.195.4-.246.533-.246.133 0 .267.005.37.01.112.005.266-.046.415.318.154.38.528 1.282.574 1.374.046.092.077.2.015.323-.062.123-.123.195-.19.277-.067.077-.144.17-.205.236-.067.072-.138.15-.06.287.077.133.344.564.738.913.507.451.933.595 1.066.661.133.067.21.057.287-.03.077-.093.333-.39.42-.523.087-.133.175-.113.298-.067.123.046.779.37.913.436.133.066.22.1.251.154.03.05.03.3-.256.713z"/>
+              </svg>
+            </motion.a>
+          </motion.div>
+
+          <motion.div variants={fadeUp} className="mt-8 flex flex-wrap gap-2 items-center">
+            <span className="text-[10px] font-extrabold uppercase tracking-[0.2em] text-white/40 mr-1">Programs:</span>
+            {["IELTS", "PTE", "CELPIP", "Duolingo", "LanguageCert", "Career English"].map((exam) => (
+              <span key={exam} className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-semibold text-white/80 shadow-sm">
+                {exam}
+              </span>
+            ))}
           </motion.div>
 
         </motion.div>
@@ -839,10 +868,15 @@ const glowVariants: Variants = {
 };
 
 function CourseCard({ course }: Readonly<{ course: Course }>) {
+  const text = `Hi! I am interested in the ${course.name} course. Please share details.`;
+  const encodedText = encodeURIComponent(text);
   return (
-    <motion.article
+    <motion.a
       variants={cardVariants}
       whileHover="hover"
+      href={`https://wa.me/918921233005?text=${encodedText}`}
+      target="_blank"
+      rel="noopener noreferrer"
       className="relative overflow-hidden rounded-xl border border-white/10 bg-white/5 backdrop-blur-md p-8 shadow-[0_16px_40px_rgba(1,30,40,0.5)] hover:shadow-[0_24px_48px_rgba(173,151,89,0.12)] hover:border-gold/30 transition-all duration-700 flex flex-col cursor-pointer"
       style={{ transformOrigin: "bottom center" }}
     >
@@ -878,7 +912,7 @@ function CourseCard({ course }: Readonly<{ course: Course }>) {
           </div>
         </div>
       </div>
-    </motion.article>
+    </motion.a>
   );
 }
 
@@ -1028,6 +1062,28 @@ function TestimonialSection() {
           <Suspense fallback={<div>Loading testimonials...</div>}>
             <Testimonials />
           </Suspense>
+          <motion.div
+            initial={{ opacity: 0, y: 25 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.85, ease: [0.22, 1, 0.36, 1] }}
+            className="mt-12 flex flex-col items-center text-center max-w-xl mx-auto"
+          >
+            <h4 className="font-serif text-2xl text-white">Ready to be our next success story?</h4>
+            <p className="mt-3 text-sm text-white/70">
+              Start with a free demo class to get your roadmap and personalized recommendations.
+            </p>
+            <motion.a
+              whileTap={{ scale: 0.98 }}
+              href="https://wa.me/918921233005?text=Hi!%20I%20would%20like%20to%20start%20with%20a%20demo%20class"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-6 inline-flex min-h-11 items-center justify-center gap-2 rounded-full bg-gold px-7 py-3.5 text-xs uppercase tracking-wider font-extrabold text-white shadow-sm transition hover:bg-gold/90"
+            >
+              Start Free Trial
+              <Icon path={icons.arrow} className="h-3.5 w-3.5" />
+            </motion.a>
+          </motion.div>
         </div>
       </div>
     </section>
@@ -1089,6 +1145,27 @@ function FAQSection() {
             );
           })}
         </div>
+        <motion.div
+          initial={{ opacity: 0, y: 15 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="mt-10 flex flex-col items-center text-center"
+        >
+          <p className="text-sm text-white/60 mb-4">Still have questions? I'm happy to help.</p>
+          <motion.a
+            whileTap={{ scale: 0.98 }}
+            href="https://wa.me/918921233005?text=Hi!%20I%20have%20a%20question%20about%20the%20coaching%20program."
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full border border-gold bg-white/5 px-6 py-3.5 text-xs uppercase tracking-wider font-extrabold text-white shadow-sm transition hover:bg-white/10"
+          >
+            Chat with me on WhatsApp
+            <svg viewBox="0 0 24 24" className="h-4 w-4 fill-current text-gold" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12.004 2c-5.51 0-9.993 4.483-9.993 9.993 0 1.763.457 3.49 1.332 5.016L2 22l5.127-1.346c1.472.802 3.123 1.226 4.877 1.226 5.511 0 9.994-4.483 9.994-9.993C21.998 6.483 17.514 2 12.004 2zm5.244 13.021c-.287.41-.836.758-1.36.953-.41.154-.923.277-2.605-.42-2.144-.892-3.477-3.067-3.58-3.21-.1-.133-.825-1.097-.825-2.092 0-.995.523-1.482.708-1.677.185-.195.4-.246.533-.246.133 0 .267.005.37.01.112.005.266-.046.415.318.154.38.528 1.282.574 1.374.046.092.077.2.015.323-.062.123-.123.195-.19.277-.067.077-.144.17-.205.236-.067.072-.138.15-.06.287.077.133.344.564.738.913.507.451.933.595 1.066.661.133.067.21.057.287-.03.077-.093.333-.39.42-.523.087-.133.175-.113.298-.067.123.046.779.37.913.436.133.066.22.1.251.154.03.05.03.3-.256.713z"/>
+            </svg>
+          </motion.a>
+        </motion.div>
       </div>
     </section>
   );
@@ -1103,7 +1180,7 @@ function ContactSection() {
             <div className="p-8 text-white md:p-10 lg:p-12">
               <p className="text-sm font-extrabold uppercase tracking-[0.18em] text-white/52">Contact</p>
               <h2 className="mt-5 max-w-lg font-serif text-4xl leading-tight text-white md:text-[3.2rem]">
-                Start with a demo class and get the right recommendation.
+                Start with a free trial and get the right recommendation.
               </h2>
               <p className="mt-5 max-w-xl text-base leading-8 text-white/74">
                 Share your goal, target exam, or confidence challenge. We will suggest the most suitable course format and timing instead of pushing a generic batch.
