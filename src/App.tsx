@@ -206,7 +206,7 @@ const courses: Course[] = [
     name: "Crash Lessons",
     tag: "Fast fixes",
     outcome: "Brush up fast with targeted 2-5 hour sessions. Perfect before exams or interviews. Fast fixes for real problems.",
-    price: "Starting from Rs. 50+",
+    price: "Starting from ₹ 50+",
     cta: "Book Now",
     accent: "from-[#f5e7dc] via-[#fffaf5] to-white"
   },
@@ -214,7 +214,7 @@ const courses: Course[] = [
     name: "Single Module Sessions",
     tag: "Pay per session",
     outcome: "Struggling with one specific part - Fix it without committing to a full course. Pay per session. Learn what you need.",
-    price: "Starting from Rs. 50+",
+    price: "Starting from ₹ 50+",
     cta: "Book Now",
     accent: "from-[#f5e7dc] via-[#fffaf5] to-white"
   },
@@ -222,7 +222,7 @@ const courses: Course[] = [
     name: "Writing Corrections",
     tag: "No commitment",
     outcome: "Submit your writing. Get precise corrections and improvements - no fluff. No long-term commitment. Just results.",
-    price: "Starting from Rs. 50+",
+    price: "Starting from ₹ 50+",
     cta: "Book Now",
     accent: "from-[#f5e7dc] via-[#fffaf5] to-white"
   }
@@ -567,10 +567,21 @@ function Hero() {
 
           <motion.div variants={fadeUp} className="mt-8 flex flex-wrap gap-2 items-center">
             <span className="text-[10px] font-extrabold uppercase tracking-[0.2em] text-white/40 mr-1">Programs:</span>
-            {["IELTS", "PTE", "CELPIP", "Duolingo", "LanguageCert", "Career English"].map((exam) => (
-              <span key={exam} className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-semibold text-white/80 shadow-sm">
-                {exam}
-              </span>
+            {[
+              { label: "IELTS", target: "#course-ielts-prep" },
+              { label: "PTE", target: "#course-pte-training" },
+              { label: "CELPIP", target: "#course-celpip" },
+              { label: "Duolingo", target: "#course-duolingo" },
+              { label: "LanguageCert", target: "#course-languagecert" },
+              { label: "Career English", target: "#course-real-fluency" }
+            ].map(({ label, target }) => (
+              <a
+                key={label}
+                href={target}
+                className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-semibold text-white/80 shadow-sm hover:border-gold/50 hover:bg-white/10 hover:text-white transition-all cursor-pointer"
+              >
+                {label}
+              </a>
             ))}
           </motion.div>
 
@@ -661,17 +672,16 @@ function TrustStrip() {
           ))}
         </div>
         <div className="mt-8 pt-4 border-t border-white/5 flex justify-start">
-          <a
+          <motion.a
+            whileTap={{ scale: 0.98 }}
             href="https://wa.me/918921233005?text=Hi!%20I'd%20like%20to%20discuss%20coaching%20with%20you."
             target="_blank"
             rel="noopener noreferrer"
-            className="group inline-flex items-center gap-2 text-sm font-bold text-gold hover:opacity-80 transition-opacity"
+            className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-gold px-8 py-4 text-sm font-bold text-white shadow-sm transition hover:bg-gold/90 hover:scale-[1.02] active:scale-[0.98]"
           >
             Talk to a Coach
-            <svg viewBox="0 0 24 24" className="h-4 w-4 fill-none stroke-current transition-transform duration-300 group-hover:translate-x-1" strokeWidth="2.5" xmlns="http://www.w3.org/2000/svg">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M12 5l7 7-7 7" />
-            </svg>
-          </a>
+            <Icon path={icons.arrow} className="h-4 w-4" />
+          </motion.a>
         </div>
       </div>
     </section>
@@ -818,10 +828,10 @@ function WhySection() {
             href="https://wa.me/918921233005?text=Hi!%20I'd%20like%20to%20discuss%20my%20fluency%20goals%20and%20start%20my%20trial."
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full border border-gold bg-white/5 px-7 py-3.5 text-xs uppercase tracking-wider font-extrabold text-white shadow-sm transition hover:bg-white/10"
+            className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-gold px-8 py-4 text-sm font-bold text-white shadow-sm transition hover:bg-gold/90 hover:scale-[1.02] active:scale-[0.98]"
           >
             Discuss Your Fluency Goals
-            <Icon path={icons.arrow} className="h-3.5 w-3.5" />
+            <Icon path={icons.arrow} className="h-4 w-4" />
           </motion.a>
         </motion.div>
       </div>
@@ -901,14 +911,16 @@ const glowVariants: Variants = {
 function CourseCard({ course }: Readonly<{ course: Course }>) {
   const text = `Hi! I am interested in the ${course.name} course. Please share details.`;
   const encodedText = encodeURIComponent(text);
+  const cardId = `course-${course.name.toLowerCase().replace(/\s+/g, "-")}`;
   return (
     <motion.a
+      id={cardId}
       variants={cardVariants}
       whileHover="hover"
       href={`https://wa.me/918921233005?text=${encodedText}`}
       target="_blank"
       rel="noopener noreferrer"
-      className="relative overflow-hidden rounded-xl border border-white/10 bg-white/5 backdrop-blur-md p-8 shadow-[0_16px_40px_rgba(1,30,40,0.5)] hover:shadow-[0_24px_48px_rgba(173,151,89,0.12)] hover:border-gold/30 transition-all duration-700 flex flex-col cursor-pointer"
+      className="relative overflow-hidden rounded-xl border border-white/10 bg-white/5 backdrop-blur-md p-8 shadow-[0_16px_40px_rgba(1,30,40,0.5)] hover:shadow-[0_24px_48px_rgba(173,151,89,0.12)] hover:border-gold/30 transition-all duration-700 flex flex-col cursor-pointer scroll-mt-24"
       style={{ transformOrigin: "bottom center" }}
     >
       <motion.div variants={glowVariants} className="absolute inset-0 pointer-events-none z-0">
@@ -1209,7 +1221,7 @@ function FAQSection() {
             rel="noopener noreferrer"
             className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full border border-gold bg-white/5 px-6 py-3.5 text-xs uppercase tracking-wider font-extrabold text-white shadow-sm transition hover:bg-white/10"
           >
-            Chat with me on WhatsApp
+            Chat with me
             <svg viewBox="0 0 24 24" className="h-4 w-4 fill-current text-gold" xmlns="http://www.w3.org/2000/svg">
               <path d="M12.004 2c-5.51 0-9.993 4.483-9.993 9.993 0 1.763.457 3.49 1.332 5.016L2 22l5.127-1.346c1.472.802 3.123 1.226 4.877 1.226 5.511 0 9.994-4.483 9.994-9.993C21.998 6.483 17.514 2 12.004 2zm5.244 13.021c-.287.41-.836.758-1.36.953-.41.154-.923.277-2.605-.42-2.144-.892-3.477-3.067-3.58-3.21-.1-.133-.825-1.097-.825-2.092 0-.995.523-1.482.708-1.677.185-.195.4-.246.533-.246.133 0 .267.005.37.01.112.005.266-.046.415.318.154.38.528 1.282.574 1.374.046.092.077.2.015.323-.062.123-.123.195-.19.277-.067.077-.144.17-.205.236-.067.072-.138.15-.06.287.077.133.344.564.738.913.507.451.933.595 1.066.661.133.067.21.057.287-.03.077-.093.333-.39.42-.523.087-.133.175-.113.298-.067.123.046.779.37.913.436.133.066.22.1.251.154.03.05.03.3-.256.713z"/>
             </svg>
@@ -1226,12 +1238,12 @@ function ContactSection() {
       <div className={`relative ${pageContainer}`}>
         <div className="overflow-hidden rounded-xl border border-white/10 bg-navy shadow-sm">
           <div className="grid gap-0 lg:grid-cols-[.95fr_1.05fr]">
-            <div className="p-8 text-white md:p-10 lg:p-12">
+            <div className="p-8 text-white md:p-10 lg:p-12 text-center lg:text-left">
               <p className="text-sm font-extrabold uppercase tracking-[0.18em] text-white/52">Contact</p>
-              <h2 className="mt-5 max-w-lg font-serif text-4xl leading-tight text-white md:text-[3.2rem]">
+              <h2 className="mt-5 max-w-lg font-serif text-4xl leading-tight text-white md:text-[3.2rem] mx-auto lg:mx-0">
                 Start with a free trial and get the right recommendation.
               </h2>
-              <p className="mt-5 max-w-xl text-base leading-8 text-white/74">
+              <p className="mt-5 max-w-xl text-base leading-8 text-white/74 mx-auto lg:mx-0">
                 Share your goal, target exam, or confidence challenge. We will suggest the most suitable course format and timing instead of pushing a generic batch.
               </p>
             </div>
