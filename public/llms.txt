@@ -6,8 +6,8 @@ Think in English specializes in personalized, one-on-one, and small-group traini
 
 ## Navigation & Sections
 
-- [Homepage](https://think-in-english-lilac.vercel.app/): Main landing page containing overview, courses, and booking options.
-- [Contact/Booking](https://think-in-english-lilac.vercel.app/#contact): Inquiry form for booking a demo or submitting details.
+- [Homepage](https://thinkinenglish.co.in/): Main landing page containing overview, courses, and booking options.
+- [Contact/Booking](https://thinkinenglish.co.in/#contact): Inquiry form for booking a demo or submitting details.
 
 ## Courses Offered
 
@@ -22,5 +22,5 @@ Think in English specializes in personalized, one-on-one, and small-group traini
 ## Contact & Inquiries
 
 - **WhatsApp & Call**: [+91 89212 33005](https://wa.me/918921233005)
-- **Email**: [hello@thinkinenglish.in](mailto:hello@thinkinenglish.in)
+- **Email**: [mail@thinkinenglish.co.in](mailto:mail@thinkinenglish.co.in)
 - **Inquiry Form**: Located at `/ #contact`, routes submitted details (Name, WhatsApp, Email, Struggle, Exam Date) directly to a pre-filled WhatsApp message redirecting to the founder's WhatsApp.

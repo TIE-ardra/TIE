@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://thinkinenglish.com/sitemap.xml
+Sitemap: https://thinkinenglish.co.in/sitemap.xml

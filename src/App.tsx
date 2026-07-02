@@ -1302,7 +1302,7 @@ function Footer() {
               <span>Phone: +91 89212 33005</span>
               <span className="hidden sm:inline mx-2">•</span>
               <br className="sm:hidden" />
-              <span>Email: hello@thinkinenglish.in</span>
+              <span>Email: mail@thinkinenglish.co.in</span>
             </div>
             <div className="flex gap-2.5">
               {socialIcons.map(([label, href, path]) => (
