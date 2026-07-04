@@ -33,7 +33,7 @@ const testimonials = [
   },
   {
     text: "No junior tutors. No massive batches. Every single piece of my writing was reviewed line by line. You just don't get this level of care elsewhere.",
-    image: "https://images.unsplash.com/photo-1594744803329-e58b31de215f?auto=format&fit=crop&w=320&h=320&q=80",
+    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=320&h=320&q=80",
     name: "Meera Krishnan",
     role: "Duolingo Prep",
   },
