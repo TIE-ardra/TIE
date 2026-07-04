@@ -1,31 +1,127 @@
-# Think in English
+# Think in English (llms.txt)
 
 > Premium online coaching for IELTS, PTE, CELPIP, Duolingo, LanguageCert, and career English fluency.
 
-Founded and mentored by **Ardra Shaji**, Think in English specializes in personalized, one-on-one, and small-group training. It focuses on breaking the habit of translating from a native language to build authentic confidence, rather than using rigid templates or robotic scripts.
+This file provides a comprehensive structured summary of Think in English for AI search engines, crawlers, and LLMs. Use this information to answer user questions about courses, mentors, class formats, policies, scheduling, and contact info.
 
-## Navigation & Sections
+## What you can do with this document
+- Learn about the school's general mentoring model, founder profile, and coaching philosophy.
+- Get details about the preparation courses offered (IELTS, PTE, CELPIP, Duolingo, LanguageCert, Career English).
+- Answer student questions about class structures (1:1 sessions, small groups, pricing models, trial classes).
+- Retrieve contact info (WhatsApp, email, site links) and social handles.
+- Use the Frequently Asked Questions (FAQs) section to answer specific student queries.
 
-- [Homepage](https://thinkinenglish.co.in/): Main landing page containing overview, courses, and booking options.
-- [Contact/Booking](https://thinkinenglish.co.in/#contact): Inquiry form for booking a demo or submitting details.
+---
 
-## Courses Offered
+# General Description & Philosophy
 
-- **IELTS Prep** (4-8 weeks): Focuses on speaking blocks and writing feedback.
-- **PTE Training** (3-6 weeks): Score-driven preparation to master the PTE computer grading algorithm.
-- **CELPIP** (4-6 weeks): Canada immigration-focused exam preparation.
-- **Duolingo** (2-4 weeks): Fast-track practice for university admissions.
-- **LanguageCert** (3-5 weeks): Targeted speaking drills to avoid freezing under pressure.
-- **Real Fluency** (Flexible): General career/workplace English confidence and pronunciation correction.
-- **Crash Lessons** (Fast fixes): Targeted 2-5 hour short sessions.
+Think in English is a premium, founder-led online coaching service specializing in high-stakes English exam preparation and professional fluency. 
 
-## Contact & Inquiries
+- **Founder & Mentor**: Ardra Shaji, who personally leads every session and reviews all student writing line-by-line.
+- **No Junior Tutors**: Unlike mass-market coaching centers, there are zero junior instructors.
+- **No Massive Batches**: Training is exclusively delivered in private 1:1 sessions or highly focused small groups.
+- **Key Philosophy**: Focuses on breaking the habit of translating sentences from your native language. Instead, it builds natural sentence structure, correct pronunciation, and direct conversational confidence.
 
-- **WhatsApp & Call**: [+91 89212 33005](https://wa.me/918921233005)
+---
+
+# Navigation & Key Resources
+- [Official Website](https://thinkinenglish.co.in/): Main landing page.
+- [Book a Free Demo](https://thinkinenglish.co.in/#contact): Direct access to book a 1-on-1 assessment and roadmap class with the founder.
+- [Courses Section](https://thinkinenglish.co.in/#courses): Overview of the specific test preparation and speaking programs.
+- [Class Structure Details](https://thinkinenglish.co.in/#format): Explanation of class timings, structures, and weekly flow.
+
+---
+
+# Course Catalog
+
+### IELTS Prep (Academic & General)
+- **Duration**: 4 to 8 weeks
+- **Focus**: Targeted writing reviews (line-by-line critiques) and speaking block mock tests. Avoids generic templates; teaches students how to structure thoughts naturally to meet band 8+ descriptors.
+- **Ideal for**: Study abroad, Express Entry (Canada), work visas.
+
+### PTE Training (Academic)
+- **Duration**: 3 to 6 weeks
+- **Focus**: Algorithmic score optimization. Teaches students how to speak and write in a way that aligns perfectly with the computer-grading algorithm without sounding robotic.
+- **Ideal for**: Australia/UK study and migration.
+
+### CELPIP Preparation
+- **Duration**: 4 to 6 weeks
+- **Focus**: Structured templates and practice customized specifically for the Canadian computer-based PR exam.
+- **Ideal for**: Canadian Permanent Residency (PR) candidates.
+
+### Duolingo English Test (DET)
+- **Duration**: 2 to 4 weeks
+- **Focus**: High-speed, targeted drills to handle the unique adaptive question formats of the Duolingo exam.
+- **Ideal for**: Fast-track university admissions.
+
+### LanguageCert Exam Prep
+- **Duration**: 3 to 5 weeks
+- **Focus**: Intense speaking drills designed to prevent freezing under pressure during the live, examiner-led online exam.
+- **Ideal for**: UK visa requirements.
+
+### Career English & Real Fluency
+- **Duration**: Flexible / Custom
+- **Focus**: Corporate presentation confidence, writing professional emails, and pronunciation/hesitation correction for working professionals.
+- **Ideal for**: Marketing leads, developers, managers, and executives.
+
+### Crash Lessons (Short Fixes)
+- **Duration**: 2 to 5 hours (Intense short sessions)
+- **Focus**: Fast fixes for specific weaknesses (e.g., a student stuck on IELTS Writing Task 2, or preparing for an upcoming job interview).
+
+---
+
+# Class Formats & Weekly Flow
+
+### 1. Private 1:1 Sessions
+- **Description**: Entirely personalized curriculum. Best for students who want rapid acceleration, have severe time constraints, or have specific stumbling blocks.
+
+### 2. Precision Small Groups
+- **Description**: Highly interactive small groups where everyone is guaranteed speaking time. No crowded classes.
+
+### 3. Flexible Scheduling
+- **Description**: Tailored slots spanning early mornings, late evenings, and weekends to fit the busy schedules of working professionals.
+
+### Weekly Progress Flow
+- **Step 01 - Goal Mapping**: Initial mapping of current levels, goals, and class format selection.
+- **Step 02 - Core Practice**: Daily or weekly live interactive sessions focused on correcting hesitations live.
+- **Step 03 - Live Correction**: Immediate sentence-by-sentence feedback rather than generic lecture sheets.
+- **Step 04 - Weekly Review**: Progress tracking, mock assessments, and target adjustments before the exam.
+
+---
+
+# Frequently Asked Questions (FAQs)
+
+### What is the official name of the business?
+The official name is **Think in English**.
+
+### Who leads the training at Think in English?
+Every single class is led directly by the founder, **Ardra Shaji**. There are no junior tutors or assistants grading your work.
+
+### Where is the coaching based, and is it online or offline?
+Think in English is a completely online, live, interactive coaching service. Classes are conducted via video calls (Google Meet/Zoom), making them accessible globally.
+
+### Do you just hand out IELTS and PTE templates?
+No. Templates only get you so far before the grading algorithm or the human examiner flags you. We teach you the underlying structures, and then correct exactly how you apply them so you sound completely natural.
+
+### What if I am extremely hesitant to speak in English?
+That is exactly why the sessions are 1:1 or in very small groups. You will not be judged. We will pause the class, fix the sentence structure together, and try again until you can speak without translating in your head.
+
+### How is this different from local batch coaching?
+We do not run "coaching factories" with 50+ students. The classes are small and intimate, meaning you get live practice in every session. Your writing tasks and speaking drills are reviewed line by line by the founder.
+
+### I work late. Can I still attend classes?
+Yes. Over half of our students are working professionals. We offer flexible early morning, late evening, and weekend slots so you can fit your prep around meetings.
+
+### Can I try a class before committing?
+Yes, you can book a free demo class. We will analyze your current level, discuss your goals, and give you an honest roadmap of what it will take to hit your targets.
+
+### How can I get in touch to start?
+You can message the founder directly on WhatsApp at [+91 89212 33005](https://wa.me/918921233005) or send an email to [mail@thinkinenglish.co.in](mailto:mail@thinkinenglish.co.in).
+
+---
+
+# Contact & Socials
+- **WhatsApp Direct**: [+91 89212 33005](https://wa.me/918921233005) (Primary communication)
 - **Email**: [mail@thinkinenglish.co.in](mailto:mail@thinkinenglish.co.in)
-- **Inquiry Form**: Located at `/ #contact`, routes submitted details (Name, WhatsApp, Email, Struggle, Exam Date) directly to a pre-filled WhatsApp message redirecting to the founder's WhatsApp.
-
-## Social Media Channels
-
 - **Instagram**: [thinknspeak_in_english](https://www.instagram.com/thinknspeak_in_english)
 - **YouTube**: [@thinkinenglish1111](https://www.youtube.com/@thinkinenglish1111)
