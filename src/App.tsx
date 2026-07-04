@@ -1,4 +1,4 @@
-import { useEffect, useState, lazy, Suspense } from "react";
+import { useEffect, useState, useRef, lazy, Suspense, type ReactNode } from "react";
 import {
   AnimatePresence,
   MotionConfig,
@@ -9,6 +9,29 @@ import {
 } from "motion/react";
 
 const Testimonials = lazy(() => import("@/components/ui/testimonials-demo").then(module => ({ default: module.Testimonials })));
+
+function LazyViewport({ children, fallback = null }: { children: ReactNode; fallback?: ReactNode }) {
+  const [inView, setInView] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setInView(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: "300px" }
+    );
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+    return () => observer.disconnect();
+  }, []);
+
+  return <div ref={ref}>{inView ? children : fallback}</div>;
+}
 
 type IconName =
   | "spark"
@@ -1120,9 +1143,11 @@ function TestimonialSection() {
             eyebrowClass="text-white/50"
             copyClass="text-white"
           />
-          <Suspense fallback={<div>Loading testimonials...</div>}>
-            <Testimonials />
-          </Suspense>
+          <LazyViewport fallback={<div className="h-48 flex items-center justify-center text-white/50 text-sm">Loading testimonials...</div>}>
+            <Suspense fallback={<div className="h-48 flex items-center justify-center text-white/50 text-sm">Loading testimonials...</div>}>
+              <Testimonials />
+            </Suspense>
+          </LazyViewport>
           <motion.div
             initial={{ opacity: 0, y: 25 }}
             whileInView={{ opacity: 1, y: 0 }}
