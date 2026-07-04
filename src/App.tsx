@@ -491,7 +491,7 @@ function NavBar() {
             <motion.a
               whileTap={{ scale: 0.96 }}
               href="#contact"
-               className="hidden sm:inline-flex h-10 items-center justify-center rounded-full bg-gold px-5 text-sm font-bold text-navy shadow-sm transition-all hover:bg-gold/90 hover:shadow-[0_4px_12px_rgba(182,144,99,0.25)]"
+              className="hidden sm:inline-flex h-10 items-center justify-center rounded-full bg-gold px-5 text-sm font-bold text-navy shadow-sm transition-all hover:bg-gold/90 hover:shadow-[0_4px_12px_rgba(182,144,99,0.25)]"
             >
               Start Here
             </motion.a>
@@ -674,7 +674,7 @@ function TrustStrip() {
     <section className="pt-16 md:pt-20 pb-8">
       <div className={`${pageContainer}`}>
         <div className="border-b border-white/10 pb-6">
-          <p className="text-sm font-extrabold uppercase tracking-[0.18em] text-white/50">What you can expect</p>
+          <p className="text-sm font-extrabold uppercase tracking-[0.18em] text-white/75">What you can expect</p>
           <h2 className="mt-4 font-serif text-3xl leading-tight text-white max-w-3xl">
             Most people just need someone to sit with them and untangle their hesitation.
           </h2>
@@ -700,7 +700,7 @@ function TrustStrip() {
             href="https://wa.me/918921233005?text=Hi!%20I'd%20like%20to%20discuss%20coaching%20with%20you."
             target="_blank"
             rel="noopener noreferrer"
-             className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-gold px-8 py-4 text-sm font-bold text-navy shadow-sm transition hover:bg-gold/90 hover:scale-[1.02] active:scale-[0.98]"
+            className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-gold px-8 py-4 text-sm font-bold text-navy shadow-sm transition hover:bg-gold/90 hover:scale-[1.02] active:scale-[0.98]"
           >
             Talk to a Coach
             <Icon path={icons.arrow} className="h-4 w-4" />
@@ -790,7 +790,7 @@ function AboutSection() {
                 </div>
                 <div className="mt-8">
                   <p className="text-sm font-bold text-white uppercase tracking-widest">Ardra Shaji</p>
-                  <p className="mt-1 text-sm text-white/50">Founder, Think in English</p>
+                  <p className="mt-1 text-sm text-white/75">Founder, Think in English</p>
                 </div>
               </div>
             </div>
@@ -811,7 +811,7 @@ function WhySection() {
           title="Premium without feeling distant. Personal without feeling casual."
           copy={"I don't believe in running a factory. The coaching is designed to feel dependable and distinctly human. That means honest feedback and a clear sense of progress.\nEvery session is led directly by the founder, ensuring consistent quality and personalized attention. We focus on practical communication skills that transfer directly to real-world situations, whether you're preparing for international exams or professional presentations."}
           titleClass="text-white"
-          eyebrowClass="text-white/50"
+          eyebrowClass="text-white/75"
           copyClass="text-white"
         />
 
@@ -964,10 +964,10 @@ function CourseCard({ course }: Readonly<{ course: Course }>) {
       <p className="mt-5 max-w-md text-base leading-relaxed text-white relative z-10">{course.outcome}</p>
 
       <div className="mt-auto relative z-10">
-        <p className="mt-10 text-[10px] font-extrabold uppercase tracking-[0.2em] text-white/40">Directed correction</p>
+        <p className="mt-10 text-[10px] font-extrabold uppercase tracking-[0.2em] text-white/70">Directed correction</p>
         <div className="mt-6 flex items-center justify-between gap-4 border-t border-white/10 pt-6">
           <div>
-            <p className="text-[10px] font-extrabold uppercase tracking-[0.2em] text-white/40">{course.price ? "Price" : "Duration"}</p>
+            <p className="text-[10px] font-extrabold uppercase tracking-[0.2em] text-white/70">{course.price ? "Price" : "Duration"}</p>
             <p className="mt-1 text-sm font-bold text-white">{course.price || course.duration}</p>
           </div>
           <div className="inline-flex items-center gap-2 text-sm font-bold text-white group">
@@ -991,7 +991,7 @@ function CoursesSection() {
           title="Programs built for strict score goals and unshakeable confidence."
           copy="Standardized tests shouldn't feel like a casino. We focus relentlessly on the exact rubrics so you don't just 'try' the exam - you control it."
           titleClass="text-white"
-          eyebrowClass="text-white/50"
+          eyebrowClass="text-white/75"
           copyClass="text-white"
         />
 
@@ -1014,7 +1014,7 @@ function CoursesSection() {
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           className="mt-28 mb-12 pl-6 md:pl-8 border-l-[3px] border-gold"
         >
-          <p className="text-sm font-extrabold uppercase tracking-[0.18em] text-white/50 mb-4">Additional Help</p>
+          <p className="text-sm font-extrabold uppercase tracking-[0.18em] text-white/75 mb-4">Additional Help</p>
           <h3 className="font-serif text-[1.75rem] md:text-[2.2rem] leading-tight text-white max-w-2xl">
             No long-term commitment. Just results.
           </h3>
@@ -1050,7 +1050,7 @@ function FormatSection() {
           eyebrow="Class structure"
           title="We mold the class around your calendar, so you don't burn out."
           copy={"I don't force you into rigid batches. Whether you want intense 1:1 focus or a consistent small group, we figure out a structure that you actually look forward to attending.\nEvery class format is built to keep feedback immediate, progress visible, and practice aligned with your current level."}
-          eyebrowClass="text-white/52"
+          eyebrowClass="text-white/75"
           titleClass="text-white"
           copyClass="text-white/72"
         />
@@ -1071,7 +1071,7 @@ function FormatSection() {
                 </div>
                 <h3 className="mt-8 font-serif text-2xl leading-tight text-white">{item.title}</h3>
                 <p className="mt-4 text-base leading-relaxed text-white/72">{item.text}</p>
-                <p className="mt-7 text-xs font-extrabold uppercase tracking-[0.16em] text-white/48">{item.meta}</p>
+                <p className="mt-7 text-xs font-extrabold uppercase tracking-[0.16em] text-white/75">{item.meta}</p>
               </motion.article>
             ))}
           </div>
@@ -1083,7 +1083,7 @@ function FormatSection() {
             transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }}
             className="rounded-xl border border-border/30 bg-white/5 p-7 "
           >
-            <p className="text-sm font-extrabold uppercase tracking-[0.18em] text-white/50">Weekly flow</p>
+            <p className="text-sm font-extrabold uppercase tracking-[0.18em] text-white/75">Weekly flow</p>
             <div className="mt-8 space-y-5">
               {[
                 ["01", "Goal mapping", "Current level, target, and class format selection."],
@@ -1140,7 +1140,7 @@ function TestimonialSection() {
             copy="The only metric that matters at the end of the day is whether you hit your goal. Here are real stories from students who stopped struggling with English and started using it with absolute confidence."
             narrow
             titleClass="text-white"
-            eyebrowClass="text-white/50"
+            eyebrowClass="text-white/75"
             copyClass="text-white"
           />
           <LazyViewport fallback={<div className="h-48 flex items-center justify-center text-white/50 text-sm">Loading testimonials...</div>}>
@@ -1155,7 +1155,7 @@ function TestimonialSection() {
             transition={{ duration: 0.85, ease: [0.22, 1, 0.36, 1] }}
             className="mt-12 flex flex-col items-center text-center max-w-xl mx-auto"
           >
-             <h3 className="font-serif text-2xl text-white">Ready to be our next success story?</h3>
+            <h3 className="font-serif text-2xl text-white">Ready to be our next success story?</h3>
             <p className="mt-3 text-sm text-white/70">
               Start with a free demo class to get your roadmap and personalized recommendations.
             </p>
@@ -1188,7 +1188,7 @@ function FAQSection() {
           copy="I believe in complete transparency. If you have any other questions, you can always WhatsApp me directly. Most learners want to know how the classes work, whether they need one-to-one support or a small group, and how quickly they can expect measurable improvement."
           align="center"
           titleClass="text-white"
-          eyebrowClass="text-white/50"
+          eyebrowClass="text-white/75"
           copyClass="text-white"
         />
 
@@ -1275,7 +1275,7 @@ function ContactSection() {
 
             <div className="bg-navy p-8 md:p-10 lg:p-12 lg:border-l lg:border-white/10">
               <div className="mx-auto max-w-xl">
-                 <p className="text-sm font-extrabold uppercase tracking-[0.18em] text-white/75">Direct access</p>
+                <p className="text-sm font-extrabold uppercase tracking-[0.18em] text-white/75">Direct access</p>
                 <p className="mt-4 text-3xl font-serif leading-tight text-white md:text-4xl">
                   Stop scrolling. Let's look at your current level and build a roadmap.
                 </p>
@@ -1289,6 +1289,7 @@ function ContactSection() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="mt-8 inline-flex min-h-12 w-full items-center justify-center gap-3 rounded-full bg-gold px-8 py-4 text-sm font-bold text-navy shadow-[0_4px_12px_rgba(182,144,99,0.2)] transition-all hover:bg-gold/90 hover:scale-[1.02] active:scale-[0.98] sm:w-fit"
+                >
                   Message me on WhatsApp
                   <svg viewBox="0 0 24 24" className="h-[18px] w-[18px] fill-current" xmlns="http://www.w3.org/2000/svg">
                     <path d="M12.004 2c-5.51 0-9.993 4.483-9.993 9.993 0 1.763.457 3.49 1.332 5.016L2 22l5.127-1.346c1.472.802 3.123 1.226 4.877 1.226 5.511 0 9.994-4.483 9.994-9.993C21.998 6.483 17.514 2 12.004 2zm5.244 13.021c-.287.41-.836.758-1.36.953-.41.154-.923.277-2.605-.42-2.144-.892-3.477-3.067-3.58-3.21-.1-.133-.825-1.097-.825-2.092 0-.995.523-1.482.708-1.677.185-.195.4-.246.533-.246.133 0 .267.005.37.01.112.005.266-.046.415.318.154.38.528 1.282.574 1.374.046.092.077.2.015.323-.062.123-.123.195-.19.277-.067.077-.144.17-.205.236-.067.072-.138.15-.06.287.077.133.344.564.738.913.507.451.933.595 1.066.661.133.067.21.057.287-.03.077-.093.333-.39.42-.523.087-.133.175-.113.298-.067.123.046.779.37.913.436.133.066.22.1.251.154.03.05.03.3-.256.713z"/>
@@ -1345,7 +1346,7 @@ function Footer() {
           </div>
         </div>
         
-       <div className="mt-6 border-t border-white/5 pt-4 text-center text-[11px] text-white/70">
+        <div className="mt-6 border-t border-white/5 pt-4 text-center text-[11px] text-white/70">
           Copyright &copy; 2024 Think in English. All rights reserved.
         </div>
       </div>
